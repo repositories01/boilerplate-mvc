@@ -12,7 +12,12 @@ class HomeController extends Controller
 
   public function index(ServerRequestInterface $request, ResponseInterface $response)
   {
-    
+      $cotacao = Cotacao::all();
+
+      $this->cotacao = $cotacao;
+
+
+
       return $this->view('home',$response);
   }
 

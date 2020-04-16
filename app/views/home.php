@@ -6,6 +6,7 @@
   <title>Document</title>
 </head>
 <body>
+<?php  print_r($this->cotacao); ?>
   <h1>cotacao</h1>
 </body>
 </html>
