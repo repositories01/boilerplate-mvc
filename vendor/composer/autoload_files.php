@@ -7,5 +7,4 @@ $baseDir = dirname($vendorDir);
 
 return array(
     '253c157292f75eb38082b5acb06f3f01' => $vendorDir . '/nikic/fast-route/src/functions.php',
-    'e93238f8883e5c1cf65eb23d77756354' => $baseDir . '/app/helpers.php',
 );
