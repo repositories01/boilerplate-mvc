@@ -10,8 +10,8 @@ class Db
     {
       
         try{
-            $pdo = new \PDO('mysql:host=localhost;dbname=login', 'root', 'surfsempre0');
-            return $pdo;
+            $pdo = new \PDO('mysql:host=localhost;dbname=cotacao', 'thiago', 'root');
+            return $pdo;    
          
 
         }catch(PDOException $error){

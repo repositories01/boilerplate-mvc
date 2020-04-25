@@ -8,8 +8,8 @@ class HomeModel
     public static function all()
     {
     
+       $sql = "SELECT * FROM user";
        $db = Db::conexao();
-       $sql = "SELECT * FROM usuario";
        $stmt = $db->query($sql);
        $user = $stmt->fetchAll();
 
