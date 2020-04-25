@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "98bbe9c9a2f8138e2dd41d9a394d4e82",
+    "content-hash": "062ee2385db71c0742e1d88855caac15",
     "packages": [
         {
             "name": "nikic/fast-route",
@@ -58,12 +58,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/silexphp/Pimple.git",
-                "reference": "e5a1a5b45965ec84f12db8aa87a4b82932459e33"
+                "reference": "855b0196f58541b312d947205b628aab1296603b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silexphp/Pimple/zipball/e5a1a5b45965ec84f12db8aa87a4b82932459e33",
-                "reference": "e5a1a5b45965ec84f12db8aa87a4b82932459e33",
+                "url": "https://api.github.com/repos/silexphp/Pimple/zipball/855b0196f58541b312d947205b628aab1296603b",
+                "reference": "855b0196f58541b312d947205b628aab1296603b",
                 "shasum": ""
             },
             "require": {
@@ -100,7 +100,7 @@
                 "container",
                 "dependency injection"
             ],
-            "time": "2020-03-03T10:25:02+00:00"
+            "time": "2020-04-24T08:19:17+00:00"
         },
         {
             "name": "psr/container",

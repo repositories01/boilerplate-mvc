@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Helpers;
+// namespace App\Helpers;
 
-class Util
-{
-  public static function trataValor($valor)
-  {
-    return "R$ ".number_format($valor,2,',','.');
-  }
-}
+// class Util
+// {
+//   public static function trataValor($valor)
+//   {
+//     return "R$ ".number_format($valor,2,',','.');
+//   }
+// }

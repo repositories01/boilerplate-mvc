@@ -54,12 +54,12 @@
         "source": {
             "type": "git",
             "url": "https://github.com/silexphp/Pimple.git",
-            "reference": "e5a1a5b45965ec84f12db8aa87a4b82932459e33"
+            "reference": "855b0196f58541b312d947205b628aab1296603b"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/silexphp/Pimple/zipball/e5a1a5b45965ec84f12db8aa87a4b82932459e33",
-            "reference": "e5a1a5b45965ec84f12db8aa87a4b82932459e33",
+            "url": "https://api.github.com/repos/silexphp/Pimple/zipball/855b0196f58541b312d947205b628aab1296603b",
+            "reference": "855b0196f58541b312d947205b628aab1296603b",
             "shasum": ""
         },
         "require": {
@@ -69,7 +69,7 @@
         "require-dev": {
             "symfony/phpunit-bridge": "^5.0"
         },
-        "time": "2020-03-03T10:25:02+00:00",
+        "time": "2020-04-24T08:19:17+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
