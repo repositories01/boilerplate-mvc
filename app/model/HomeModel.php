@@ -1,19 +1,10 @@
 <?php
 
-namespace App\Model;
-use Config\Db;
+// namespace App\Model;
 
-class HomeModel
-{
-    public static function all()
-    {
-    
-       $sql = "SELECT * FROM user";
-       $db = Db::conexao();
-       $stmt = $db->query($sql);
-       $user = $stmt->fetchAll();
-
-       return $user;
-       
-    }
-}
+// class HomeModel extends Model
+// {
+//    //nome da tabela
+//     protected $table = "user";
+   
+// }

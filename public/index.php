@@ -17,5 +17,8 @@ $c = new \Slim\Container($configuration);
 $app = new \Slim\App($c);
 
 $app->get('/', HomeController::class . ':index');
+$app->get('/cadastro', CadastroController::class . ':index');
+
+
 
 $app->run();

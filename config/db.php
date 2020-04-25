@@ -15,6 +15,7 @@ class Db
          
 
         }catch(PDOException $error){
+            
             return $error->getMessage();
 
         }

@@ -3,19 +3,19 @@ namespace App\Controller;
 
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Psr\Http\Message\ResponseInterface as Response;
-use App\Model\HomeModel;
+use App\Model\CadastroModel;
 
-class HomeController
+class CadastroController
 {
 
 
   public function index(Request $request, Response $response)
   {
 
-    // $this->dados = HomeModel::all();
+    $this->dados = CadastroModel::all();
     
-   $home= include '../app/views/home.php';
-   $response->getBody()->getContents($home);
+   $cadastro= include '../app/views/cadastro.php';
+   $response->getBody()->getContents($cadastro);
   }
   
 

@@ -5,13 +5,8 @@
     <title>Principal</title>
   </head>
   <body>
-    <h2>Cotação</h2>
-  <?php 
-  $user = $this->dados;
-foreach($user as $key => $value)  {
-  echo "<li>".$value['nome'] . "| " . $value['email'] . "</li>";
-}
-  ?>
+    <h2>Home</h2>
+
 
   </body>
 </html>
