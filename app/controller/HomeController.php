@@ -12,10 +12,10 @@ class HomeController
   public function index(Request $request, Response $response)
   {
 
-    $this->dado = HomeModel::all();
+    $this->dados = HomeModel::all();
     
-   $pagina = include '../app/views/home.php';
-   $response->getBody()->getContents($pagina);
+   $home= include '../app/views/home.php';
+   $response->getBody()->getContents($home);
   }
   
 

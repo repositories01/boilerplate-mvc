@@ -7,8 +7,10 @@
   <body>
     <h2>Cotação</h2>
   <?php 
-  echo var_dump($this->dado);
-  
+  $user = $this->dados;
+foreach($user as $key => $value)  {
+  echo "<li>".$value['nome'] . "| " . $value['email'] . "</li>";
+}
   ?>
 
   </body>

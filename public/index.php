@@ -7,7 +7,14 @@ use Psr\Http\Message\ResponseInterface;
 use Slim\App;
 use App\Controller\HomeController;
 
-$app = new App;
+// $app = new App;
+$configuration = [
+    'settings' => [
+        'displayErrorDetails' => true,
+    ],
+];
+$c = new \Slim\Container($configuration);
+$app = new \Slim\App($c);
 
 $app->get('/', HomeController::class . ':index');
 

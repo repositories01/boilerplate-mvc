@@ -1,12 +1,19 @@
 <?php
 
 namespace App\Model;
+use Config\Db;
+
 class HomeModel
 {
-    static public function all()
+    public static function all()
     {
-        //retorna dados 
-        $dados = "dadoddds";
-        return $dados;
+    
+       $db = Db::conexao();
+       $sql = "SELECT * FROM usuario";
+       $stmt = $db->query($sql);
+       $user = $stmt->fetchAll();
+
+       return $user;
+       
     }
 }
