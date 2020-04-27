@@ -18,5 +18,14 @@ class CadastroController
    $response->getBody()->getContents($cadastro);
   }
   
+  
+  public function salvar(Request $request, Response $response)
+  {
+
+    
+    
+   $cadastro= include '../app/views/cadastro.php';
+   $response->getBody()->getContents($cadastro);
+  }
 
 }

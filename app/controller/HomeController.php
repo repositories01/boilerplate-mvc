@@ -12,7 +12,7 @@ class HomeController
   public function index(Request $request, Response $response)
   {
 
-    // $this->dados = HomeModel::all();
+    $this->moedas = HomeModel::apiMoedas();
     
    $home= include '../app/views/home.php';
    $response->getBody()->getContents($home);

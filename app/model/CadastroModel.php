@@ -2,7 +2,7 @@
 
 namespace App\Model;
 
-class HomeModel extends Model
+class CadastroModel extends Model
 {
    //nome da tabela
     protected $table = "user";
