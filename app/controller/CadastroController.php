@@ -24,16 +24,17 @@ class CadastroController
 
     $url = $request->getParsedBody();
 
+
      
-    $dado = new CadastroModel; 
+    // $dado = new CadastroModel; 
 
-    $dado->nome = $url['nome'];
+    // $dado->nome = $url['nome'];
 
 
-    return $response->withRedirect('/cadastro'); 
+  //   return $response->withRedirect('/cadastro'); 
     
-   $home= include '../app/views/home.php';
-   $response->getBody()->getContents($home );
+  //  $home= include '../app/views/home.php';
+  //  $response->getBody()->getContents($home );
   }
 
 }

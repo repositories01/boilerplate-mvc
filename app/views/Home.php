@@ -20,6 +20,7 @@ foreach($moedas as $key =>$value)
 }
 
 ?>
+
 <form action="/cadastro/moeda" method="post">
 <input type="text" name="url" />
 <button>adicionar</button>
