@@ -14,14 +14,16 @@ foreach($moedas as $key =>$value)
 
 {
   
-   echo $value . "<br/>";
+  //  echo $value . "<br/>";
   
  
 }
 
 ?>
-<form>
-<input type="text" name="titulo" />
+<form action="/cadastro/moeda" method="post">
+<input type="text" name="url" />
+<button>adicionar</button>
+
 </form>
 
   </body>

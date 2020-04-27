@@ -16,16 +16,21 @@ class Model{
        $db = Db::conexao();
        $sql = "SELECT * FROM " . $table;
        $stmt = $db->query($sql);
-    //    $stmt->bindParam(':tabela', $table);
-    //    $stmt->execute();
-    //    $result = $stmt->fetchAll();
        $result = $stmt->fetchAll();
 
        return $result;
     
        
     }
+         
+         public function save()
 
+          {
+             $atributos = get_object_vars($this);
+             unset($atributos['table']);
+
+
+          }
  
 }
 
