@@ -6,22 +6,16 @@
   </head>
   <body>
     <h2>Home</h2>
-<?php
-$moedas = $this->moedas;
+    <?php
+    $user = $this->dados;
 
-
-foreach($moedas as $key =>$value)
-
-{
   
-  //  echo $value . "<br/>";
-  
- 
+foreach($user as $key => $value)  {
+  echo "<li>".$value['nome'] . "| " . $value['email'] . "</li>";
 }
+  ?>
 
-?>
-
-<form action="/cadastro/moeda" method="post">
+<form action="/cadastro/tarefa" method="post">
 <input type="text" name="url" />
 <button>adicionar</button>
 

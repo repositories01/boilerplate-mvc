@@ -14,15 +14,15 @@ class CadastroController
 
     $this->dados = CadastroModel::all();
     
-   $cadastro= include '../app/views/cadastro.php';
-   $response->getBody()->getContents($cadastro);
+   $home= include '../app/views/home.php';
+   $response->getBody()->getContents($home);
   }
   
   
   public function salvar(Request $request, Response $response)
   {
 
-    $url = $request->getParsedBody();
+    // $url = $request->getParsedBody();
 
 
      
