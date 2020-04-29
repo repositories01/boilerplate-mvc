@@ -5,21 +5,22 @@
     <title>Principal</title>
   </head>
   <body>
-    <h2>Home</h2>
-    <?php
+    <h2>Lista de tarefas</h2>
+   
+
+<form action="/home/cadastro" method="post">
+<input type="text" name="tarefas" />
+<button>adicionar</button>
+
+</form>
+<?php
     $user = $this->dados;
 
   
 foreach($user as $key => $value)  {
-  echo "<li>".$value['nome'] . "| " . $value['email'] . "</li>";
+  echo "<li>".$value['tarefas'] . "</li>";
 }
   ?>
-
-<form action="/cadastro/tarefa" method="post">
-<input type="text" name="url" />
-<button>adicionar</button>
-
-</form>
 
   </body>
 </html>

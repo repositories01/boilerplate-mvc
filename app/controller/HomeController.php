@@ -12,11 +12,33 @@ class HomeController
   public function index(Request $request, Response $response)
   {
 
-    $this->moedas = HomeModel::apiMoedas();
+    $this->dados = HomeModel::all();
     
    $home= include '../app/views/home.php';
    $response->getBody()->getContents($home);
   }
   
+  
+  public function salvar(Request $request, Response $response)
+  {
+    $dados = $request->getParsedBody();
+    $task = new HomeModel;
+
+    $task->tarefas = $dados['tarefas'];
+    $idtask = $task->save();
+
+    if($idtask){
+      //sucesso
+    }else{
+      //erro
+    }
+
+
+
+    return $response->withRedirect('/'); 
+    
+  //  $home= include '../app/views/home.php';
+  //  $response->getBody()->getContents($home );
+  }
 
 }

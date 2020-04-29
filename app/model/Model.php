@@ -8,14 +8,10 @@ class Model{
     public static function all()
     {
        $obj = new static;
-       $table = $obj->table;
        //referencia a classe que herdou 
-
-
-
-       $db = Db::conexao();
-       $sql = "SELECT * FROM " . $table;
-       $stmt = $db->query($sql);
+          $db = Db::conexao();
+       $select = "SELECT * FROM " . $obj->table;
+       $stmt = $db->query($select);
        $result = $stmt->fetchAll();
 
        return $result;
@@ -24,14 +20,40 @@ class Model{
     }
          
          public function save()
-
-          {
-             $atributos = get_object_vars($this);
-             unset($atributos['table']);
-
-
-          }
+            {
+         $atributos = get_object_vars($this);
+         unset($atributos['table']);
+     
+         $col = "(";
+         $val = "(";
+         $aux = true;
+         foreach ($atributos as $key => $value) {
+           if($aux){
+             $aux = false;
+             $col .= "`$key`";
+             $val .= ":$key";
+           }else{
+             $col .= ",`$key`";
+             $val .= ",:$key";
+           }
+         }
+         $col .= ")";
+         $val .= ")";
+     
+         $insert = "insert into ".$this->table." ".$col." values ".$val;
+     
+         $conn = Db::conexao();
+         $stmt = $conn->prepare($insert);
+         foreach ($atributos as $key => $value) {
+           $stmt->bindParam(':'.$key,$atributos[$key]);
+         }
+     
+         $stmt->execute();
+         return $conn->lastInsertId();
+      }
+   }
+    
  
-}
+
 
 
