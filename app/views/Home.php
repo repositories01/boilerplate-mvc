@@ -19,7 +19,11 @@
   
 foreach($user as $key => $value)  {
   echo "<li>".$value['tarefas'] . "</li>";
+  ?>
+  <a href="/home/editar/<?php echo  $value['id']?>"><button>editar</button></a>
+  <?php
 }
+
   ?>
 
   </body>

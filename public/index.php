@@ -18,8 +18,9 @@ $c = new \Slim\Container($configuration);
 $app = new \Slim\App($c);
 
 $app->get('/', HomeController::class . ':index');
-// $app->get('/cadastro', CadastroController::class . ':index');
 $app->post('/home/cadastro', HomeController::class . ':salvar');
+$app->get('/home/editar/{id}', HomeController::class . ':editar');
+$app->put('/home/cadastro/{id}', HomeController::class . ':atualizar');
 
 
 
