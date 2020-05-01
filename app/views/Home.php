@@ -20,7 +20,12 @@
 foreach($user as $key => $value)  {
   echo "<li>".$value['tarefas'] . "</li>";
   ?>
-  <a href="/home/editar/<?php echo  $value['id']?>"><button>editar</button></a>
+    <a href="/home/editar/<?php echo  $value['id']?>"><button type="button">editar</button></a>
+
+    <form action="/home/deletar/<?php echo $value['id']?>" method="post"> 
+     <input type="hidden"  name="_METHOD" value="delete">
+  <button>deletar</button>
+  </form>
   <?php
 }
 

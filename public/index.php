@@ -21,6 +21,8 @@ $app->get('/', HomeController::class . ':index');
 $app->post('/home/cadastro', HomeController::class . ':salvar');
 $app->get('/home/editar/{id}', HomeController::class . ':editar');
 $app->put('/home/cadastro/{id}', HomeController::class . ':atualizar');
+$app->delete('/home/deletar/{id}', HomeController::class . ':deletar');
+
 
 
 

@@ -58,4 +58,14 @@ public function atualizar(Request $request, Response $response)
   return $response->withRedirect('/');
 }
 
+
+public function deletar(Request $request, Response $response)
+{
+  $id = $request->getAttribute('id');
+  $deletar = HomeModel::find($id);
+  $deletarOk = $deletar->delete();
+
+  return $response->withRedirect('/');
+}
+
 }
