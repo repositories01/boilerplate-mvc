@@ -10,10 +10,16 @@
         }
     ],
     "minimum-stability": "dev",
+    "prefer-stable": true,
+
     "require": {
         "slim/slim": "^3.0"
     },
     "autoload": {
-        "psr-4": {"App\\": "app/", "Config\\":"config/", "Helpers\\":"helpers/"}
+        "psr-4": {
+            "App\\": "app/",
+            "Config\\": "config/",
+            "Helpers\\": "helpers/"
+        }
     }
 }
