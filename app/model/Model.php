@@ -8,8 +8,7 @@ class Model{
     public static function all()
     {
        $obj = new static;
-       //referencia a classe que herdou 
-          $db = Db::conexao();
+              $db = Db::conexao();
        $select = "SELECT * FROM " . $obj->table;
        $stmt = $db->query($select);
        $result = $stmt->fetchAll();
@@ -35,7 +34,6 @@ class Model{
     }
          
          public function save()
-         //atualiza registros
          { 
          $atributos = get_object_vars($this);
          unset($atributos['table']);
@@ -59,7 +57,6 @@ class Model{
            $stmt = $conn->prepare($update);
            foreach ($atributos as $key => $value) {
              $stmt->bindValue(':'.$key,$value);
-             //$stmt->bindParam(':'.$key,$atributos[$key]);
            }
            $stmt->bindValue(':id',$this->{$this->primary_key});
            $stmt->execute();
@@ -92,11 +89,9 @@ class Model{
          foreach ($atributos as $key => $value) {
           $stmt->bindValue(':'.$key, $value);
 
-          //  $stmt->bindParam(':'.$key,$atributos[$key]);
          }
      
          $stmt->execute();
-        //  return $this::find( $conn->lastInsertId());
         return $conn->lastInsertId();
       
       }
