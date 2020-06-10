@@ -1,7 +1,8 @@
 {
     "name": "thiag/mvc",
     "description": "mvc",
-    "type": "project",
+    "type": "library",
+    "version":"1.0.0",
     "license": "MIT",
     "authors": [
         {
@@ -9,7 +10,7 @@
             "email": "thiagomedina.tmd@mail.com"
         }
     ],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "prefer-stable": true,
 
     "require": {
