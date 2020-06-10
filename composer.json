@@ -18,8 +18,7 @@
     "autoload": {
         "psr-4": {
             "App\\": "app/",
-            "Config\\": "config/",
-            "Helpers\\": "helpers/"
+            "Config\\": "config/"
         }
     }
 }
