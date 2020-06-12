@@ -3,6 +3,10 @@
 ```console
 composer create-project thiag/mvc <nome-do-projeto> "dev-master@dev"
 ```
+![pastas](/../<master>/assets/mvc.png?raw=true)
+
+
+
 
 ### O que isso faz?
 
