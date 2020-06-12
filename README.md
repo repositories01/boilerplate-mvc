@@ -1,16 +1,18 @@
 ## Instalação
 ### Via composer
 ```console
-composer require thiag/mvc dev-master
+composer create-project thiag/mvc <nome-do-projeto> "dev-master@dev"
 ```
 
 ### O que isso faz?
 
-* Retorna uma aplicação inicial no padrão MVC
+* Retorna uma estrutura do projeto no padrão MVC
 * Conexão com banco de dados
 * Métodos dinânmicos  para salvar, procurar, editar e deletar no banco de dados
 * all(),find(), save(), delete()
 * Sistema de rotas já configurado
+
+
 
 
 ### Contribuindo! :thought_balloon:
