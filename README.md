@@ -1,7 +1,7 @@
 ## Instalação
 ### Via composer
 ```console
-composer create-project thiag/mvc te "dev-master@dev"
+composer create-project thiag/mvc <nome-do-projeto> "dev-master@dev"
 ```
 
 ### O que isso faz?
