@@ -3,7 +3,7 @@
 ```console
 composer create-project thiag/mvc <nome-do-projeto> "dev-master@dev"
 ```
-![pastas](/assets/mvc.png?raw=true)
+![mvc](https://user-images.githubusercontent.com/51326247/84551083-e1da7c00-ace2-11ea-9df0-54695ea79947.PNG)
 
 
 
