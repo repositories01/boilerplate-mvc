@@ -36,4 +36,5 @@ git checkout -b
 
 E pronto, após codar sua alteração, mande um Pull Request e todo mundo fica feliz!!
 
+# :clap:
 
