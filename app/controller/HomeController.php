@@ -1,72 +1,66 @@
 <?php
 namespace App\Controller;
 
-use Psr\Http\Message\ServerRequestInterface as Request;
 use Psr\Http\Message\ResponseInterface as Response;
-use App\Model\HomeModel;
+use Psr\Http\Message\ServerRequestInterface as Request;
 
 class HomeController
 {
 
+    public function index(Request $request, Response $response)
+    {
 
-  public function index(Request $request, Response $response)
-  {
+        // $this->dados = HomeModel::all();
 
-    // $this->dados = HomeModel::all();
-    
-   $home= include '../app/views/home.php';
-   $response->getBody()->getContents($home);
-  }
-  
-  
-  public function salvar(Request $request, Response $response)
-  {
-    // $dados = $request->getParsedBody();
-    
-    // $task = new HomeModel;
+        $home = include '../app/views/home.php';
+        return $response->getBody()->getContents($home);
+    }
 
-    // $task->tarefas = $dados['tarefas'];
-    // $objtask = $task->save();
+    public function salvar(Request $request, Response $response)
+    {
+        // $dados = $request->getParsedBody();
 
-    // return $response->withRedirect('/'); 
-    
-   $home= include '../app/views/home.php';
-   $response->getBody()->getContents($home );
-}
+        // $task = new HomeModel;
 
-public function editar( Request $request, Response $response)
-{
-  // $id = $request->getAttribute('id');
+        // $task->tarefas = $dados['tarefas'];
+        // $objtask = $task->save();
 
-  // $editar = HomeModel::find($id);
+        return $response->withRedirect('/');
 
+        //  $home= include '../app/views/home.php';
+        //  $response->getBody()->getContents($home );
+    }
 
-  // $this->editar = $editar;
+    public function editar(Request $request, Response $response)
+    {
+        // $id = $request->getAttribute('id');
 
+        // $editar = HomeModel::find($id);
 
-  $editar= include '../app/views/editar.php';
-  $response->getBody()->getContents($editar );
-}
+        // $this->editar = $editar;
 
-public function atualizar(Request $request, Response $response)
-{
-  // $dados = $request->getParsedBody();
-  // $id = $request->getAttribute('id');
-  // $atualizar = HomeModel::find($id);
-  // $atualizar->tarefas = $dados['tarefas'];
-  // $objAtualizar = $atualizar->save();
+        $editar = include '../app/views/editar.php';
+        $response->getBody()->getContents($editar);
+    }
 
-  return $response->withRedirect('/');
-}
+    public function atualizar(Request $request, Response $response)
+    {
+        // $dados = $request->getParsedBody();
+        // $id = $request->getAttribute('id');
+        // $atualizar = HomeModel::find($id);
+        // $atualizar->tarefas = $dados['tarefas'];
+        // $objAtualizar = $atualizar->save();
 
+        return $response->withRedirect('/');
+    }
 
-public function deletar(Request $request, Response $response)
-{
-  // $id = $request->getAttribute('id');
-  // $deletar = HomeModel::find($id);
-  // $deletarOk = $deletar->delete();
+    public function deletar(Request $request, Response $response)
+    {
+        // $id = $request->getAttribute('id');
+        // $deletar = HomeModel::find($id);
+        // $deletarOk = $deletar->delete();
 
-  return $response->withRedirect('/');
-}
+        return $response->withRedirect('/');
+    }
 
 }
